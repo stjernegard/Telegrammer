@@ -79,8 +79,8 @@ public final class HandlersQueue {
         var handlers: [Handler] = []
         for group in _handlersGroup {
             concurrentQueue.sync {
-                guard let handler = group.first(where: { $0.check(update: update) }) else { return }
-                handlers.append(handler)
+                let matchingHandlers = group.filter({ $0.check(update: update) })
+                handlers.append(contentsOf: matchingHandlers)
             }
         }
         return handlers
