@@ -46,24 +46,33 @@ public class MessageHandler: Handler {
     }
 
     public func check(update: Update) -> Bool {
-        if options.contains(.channelPostUpdates) {
-            if update.channelPost != nil {
-                return true
-            }
-            if options.contains(.editedUpdates),
-                update.editedChannelPost != nil ||
-                update.editedMessage != nil {
-                return true
-            }
+        let message: Message
+
+        if options.contains(.channelPostUpdates),
+            let newMessage = update.channelPost {
+            message = newMessage
         }
 
-        if options.contains(.messageUpdates),
-            let message = update.message,
-            filters.check(message) {
-            return true
+        else if options.contains(.channelPostUpdates) && options.contains(.editedUpdates),
+            let newMessage = update.editedChannelPost {
+            message = newMessage
         }
 
-        return false
+        else if options.contains(.editedUpdates),
+            let newMessage = update.editedMessage {
+            message = newMessage
+        }
+
+        else if options.contains(.messageUpdates),
+            let newMessage = update.message {
+            message = newMessage
+        }
+
+        else {
+            return false
+        }
+
+        return filters.check(message)
     }
 
     public func handle(update: Update, dispatcher: Dispatcher) throws {
