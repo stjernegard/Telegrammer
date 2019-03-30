@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetChatAdministratorsParams](https://core.telegram.org/bots/api#getchatadministrators)
-     
+
      - Parameters:
          - params: Parameters container, see `GetChatAdministratorsParams` struct
      - Throws: Throws on errors

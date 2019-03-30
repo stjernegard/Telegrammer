@@ -6,7 +6,7 @@
 //
 
 public extension Message {
-    
+
     /**
      Helper method to easy reply to message
      - Parameters:
@@ -14,7 +14,7 @@ public extension Message {
         - bot: Bot from which send reply
         - parseMode: Optional. Text format
         - replyMarkup: Optional. Reply Markup
-     
+
      - Throws: Throws on errors
      */
     func reply(text: String, from bot: Bot, parseMode: ParseMode? = nil, replyMarkup: ReplyMarkup? = nil) throws {
@@ -24,16 +24,16 @@ public extension Message {
                                            replyMarkup: replyMarkup)
         try bot.sendMessage(params: params)
     }
-    
+
     /**
      Helper method to easy edit message
-     
+
      - Parameters:
         - text: Text to send in reply
         - bot: Bot from which send reply
         - parseMode: Optional. Text format
         - replyMarkup: Optional. Reply Markup
-     
+
      - Throws: Throws on errors
      */
     func edit(text: String, from bot: Bot, parseMode: ParseMode? = nil, replyMarkup: InlineKeyboardMarkup? = nil) throws {
@@ -43,13 +43,13 @@ public extension Message {
                                                replyMarkup: replyMarkup)
         try bot.editMessageText(params: params)
     }
-    
+
     /**
      Helper method to easy edit message
-     
+
      - Parameters:
         - bot: Bot from which send reply
-     
+
      - Throws: Throws on errors
      */
     func delete(from bot: Bot) throws {

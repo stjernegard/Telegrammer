@@ -42,7 +42,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [AnswerShippingQueryParams](https://core.telegram.org/bots/api#answershippingquery)
-     
+
      - Parameters:
          - params: Parameters container, see `AnswerShippingQueryParams` struct
      - Throws: Throws on errors

@@ -11,59 +11,59 @@ import HeliumLogger
 import HTTP
 
 public class Longpolling: Connection {
-	
-	public var bot: Bot
-	public var dispatcher: Dispatcher
-	public var worker: Worker
-	public var running: Bool
-	
+
+    public var bot: Bot
+    public var dispatcher: Dispatcher
+    public var worker: Worker
+    public var running: Bool
+
     public var allowedUpdates: [String]? = nil
     public var limit: Int? = nil
     public var bootstrapRetries: Int? = nil
     public var cleanStart: Bool = false
     public var pollingTimeout: Int = 20
     public var pollingInterval: TimeAmount = TimeAmount.seconds(2)
-    
+
     private var lastUpdate: Update?
     private var connectionRetries: Int = 0
     private var isFirstRequest: Bool = true
-    
+
     private var pollingPromise: Promise<Void>?
-    
+
     public init(bot: Bot, dispatcher: Dispatcher, worker: Worker = MultiThreadedEventLoopGroup(numberOfThreads: 1)) {
-		self.bot = bot
-		self.dispatcher = dispatcher
-		self.worker = worker
-		self.running = false
-	}
-	
-	public func start() throws -> Future<Void> {
-		self.running = true
-		
-		let promise = worker.eventLoop.newPromise(Void.self)
-        
+        self.bot = bot
+        self.dispatcher = dispatcher
+        self.worker = worker
+        self.running = false
+    }
+
+    public func start() throws -> Future<Void> {
+        self.running = true
+
+        let promise = worker.eventLoop.newPromise(Void.self)
+
         pollingPromise = promise
-		
+
         let params = Bot.GetUpdatesParams(offset: nil, limit: limit, timeout: pollingTimeout, allowedUpdates: allowedUpdates)
-        
+
         _ = worker.eventLoop.submit {
             try self.bot.deleteWebhook().whenSuccess({ (success) in
                 guard success else { return }
                 self.longpolling(with: params)
             })
         }
-        
-		return promise.futureResult
-	}
-    
-	public func stop() {
-		running = false
-		worker.eventLoop.execute {
-			self.pollingPromise?.succeed()
-		}
-	}
-	
-	private func longpolling(with params: Bot.GetUpdatesParams) {
+
+        return promise.futureResult
+    }
+
+    public func stop() {
+        running = false
+        worker.eventLoop.execute {
+            self.pollingPromise?.succeed()
+        }
+    }
+
+    private func longpolling(with params: Bot.GetUpdatesParams) {
         var requestBody = params
         do {
             try self.bot.getUpdates(params: requestBody)
@@ -85,15 +85,15 @@ public class Longpolling: Connection {
         } catch {
             Log.error(error.localizedDescription)
             retryRequest(with: params, after: error)
-		}
-	}
-	
-	private func scheduleLongpolling(with params: Bot.GetUpdatesParams) {
-		_ = worker.eventLoop.scheduleTask(in: pollingInterval) { () -> Void in
-			self.longpolling(with: params)
-		}
-	}
-    
+        }
+    }
+
+    private func scheduleLongpolling(with params: Bot.GetUpdatesParams) {
+        _ = worker.eventLoop.scheduleTask(in: pollingInterval) { () -> Void in
+            self.longpolling(with: params)
+        }
+    }
+
     private func retryRequest(with params: Bot.GetUpdatesParams, after error: Error) {
         guard let maxRetries = bootstrapRetries, connectionRetries < maxRetries else {
             running = false
@@ -101,10 +101,10 @@ public class Longpolling: Connection {
             pollingPromise?.fail(error: error)
             return
         }
-        
+
         connectionRetries += 1
         Log.info("Retry \(connectionRetries) after failed request")
-        
+
         _ = worker.eventLoop.scheduleTask(in: pollingInterval, { () -> Void in
             self.longpolling(with: params)
         })

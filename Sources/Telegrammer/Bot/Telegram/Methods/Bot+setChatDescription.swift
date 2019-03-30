@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetChatDescriptionParams](https://core.telegram.org/bots/api#setchatdescription)
-     
+
      - Parameters:
          - params: Parameters container, see `SetChatDescriptionParams` struct
      - Throws: Throws on errors

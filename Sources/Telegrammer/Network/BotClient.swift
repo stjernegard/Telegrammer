@@ -10,17 +10,17 @@ import HTTP
 import LoggerAPI
 
 public class BotClient {
-    
+
     let host: String
     let port: Int
-    
+
     let token: String
     //Due to memory leak in HTTPClient, temporarely switching on URLSession
 //    var client: HTTPClient?
 
     let worker: Worker
     let callbackWorker: Worker
-    
+
     public init(host: String, port: Int, token: String, worker: Worker) throws {
         self.host = host
         self.port = port
@@ -28,7 +28,7 @@ public class BotClient {
         self.worker = worker
         self.callbackWorker = MultiThreadedEventLoopGroup(numberOfThreads: 1)
     }
-    
+
     /// Sends request to api.telegram.org, and receive TelegramContainer object
     ///
     /// - Parameters:
@@ -41,11 +41,11 @@ public class BotClient {
     func respond<T: Codable>(endpoint: String, body: HTTPBody, headers: HTTPHeaders) throws -> Future<TelegramContainer<T>> {
         let url = apiUrl(endpoint: endpoint)
         let httpRequest = HTTPRequest(method: .POST, url: url, headers: headers, body: body)
-        
+
         let promise = worker.eventLoop.newPromise(TelegramContainer<T>.self)
-        
+
         Log.info("Sending request:\n\(httpRequest.description)")
-        
+
         worker.eventLoop.execute {
             self.send(request: httpRequest).whenSuccess({ (container) in
                 promise.succeed(result: container)
@@ -53,7 +53,7 @@ public class BotClient {
         }
         return promise.futureResult
     }
-    
+
     private func send<T: Codable>(request: HTTPRequest) -> Future<TelegramContainer<T>> {
             let promise = worker.eventLoop.newPromise(of: TelegramContainer<T>.self)
 
@@ -107,7 +107,7 @@ public class BotClient {
         }
  */
     }
-    
+
     func decode<T: Encodable>(response: HTTPResponse) throws -> TelegramContainer<T> {
         ///Temporary workaround for drop current HTTPClient state after each request,
         ///waiting for fixes from Vapor team
@@ -119,7 +119,7 @@ public class BotClient {
         throw BotError()
     }
 
-    
+
     func apiUrl(endpoint: String) -> URL {
         return URL(string: "https://\(host):\(port)/bot\(token)/\(endpoint)")!
     }

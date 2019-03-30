@@ -137,7 +137,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendInvoiceParams](https://core.telegram.org/bots/api#sendinvoice)
-     
+
      - Parameters:
          - params: Parameters container, see `SendInvoiceParams` struct
      - Throws: Throws on errors

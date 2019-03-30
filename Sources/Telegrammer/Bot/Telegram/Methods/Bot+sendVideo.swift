@@ -82,7 +82,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendVideoParams](https://core.telegram.org/bots/api#sendvideo)
-     
+
      - Parameters:
          - params: Parameters container, see `SendVideoParams` struct
      - Throws: Throws on errors

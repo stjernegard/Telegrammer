@@ -42,7 +42,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [StopMessageLiveLocationParams](https://core.telegram.org/bots/api#stopmessagelivelocation)
-     
+
      - Parameters:
          - params: Parameters container, see `StopMessageLiveLocationParams` struct
      - Throws: Throws on errors

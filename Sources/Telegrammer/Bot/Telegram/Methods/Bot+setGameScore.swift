@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetGameScoreParams](https://core.telegram.org/bots/api#setgamescore)
-     
+
      - Parameters:
          - params: Parameters container, see `SetGameScoreParams` struct
      - Throws: Throws on errors

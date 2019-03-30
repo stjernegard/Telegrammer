@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [EditMessageTextParams](https://core.telegram.org/bots/api#editmessagetext)
-     
+
      - Parameters:
          - params: Parameters container, see `EditMessageTextParams` struct
      - Throws: Throws on errors

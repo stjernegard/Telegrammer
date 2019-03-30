@@ -38,7 +38,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [DeleteMessageParams](https://core.telegram.org/bots/api#deletemessage)
-     
+
      - Parameters:
          - params: Parameters container, see `DeleteMessageParams` struct
      - Throws: Throws on errors

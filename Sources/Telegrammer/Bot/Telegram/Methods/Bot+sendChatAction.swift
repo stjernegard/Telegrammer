@@ -34,7 +34,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendChatActionParams](https://core.telegram.org/bots/api#sendchataction)
-     
+
      - Parameters:
          - params: Parameters container, see `SendChatActionParams` struct
      - Throws: Throws on errors

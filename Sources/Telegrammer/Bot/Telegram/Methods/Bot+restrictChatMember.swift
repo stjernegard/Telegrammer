@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [RestrictChatMemberParams](https://core.telegram.org/bots/api#restrictchatmember)
-     
+
      - Parameters:
          - params: Parameters container, see `RestrictChatMemberParams` struct
      - Throws: Throws on errors

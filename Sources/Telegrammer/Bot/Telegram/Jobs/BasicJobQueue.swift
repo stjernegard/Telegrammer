@@ -41,7 +41,7 @@ public class BasicJobQueue<C>: JobQueue {
         let typeErasedJob = AnyJob(job)
 
         jobs.append(typeErasedJob)
-        
+
         return worker.eventLoop.scheduleTask(in: .seconds(Int(round(startTime)))) { () -> J in
             try typeErasedJob.run(self.bot)
             return job

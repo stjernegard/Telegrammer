@@ -38,7 +38,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [KickChatMemberParams](https://core.telegram.org/bots/api#kickchatmember)
-     
+
      - Parameters:
          - params: Parameters container, see `KickChatMemberParams` struct
      - Throws: Throws on errors

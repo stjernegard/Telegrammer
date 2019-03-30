@@ -42,7 +42,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendMediaGroupParams](https://core.telegram.org/bots/api#sendmediagroup)
-     
+
      - Parameters:
          - params: Parameters container, see `SendMediaGroupParams` struct
      - Throws: Throws on errors

@@ -11,7 +11,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetMeParams](https://core.telegram.org/bots/api#getme)
-     
+
      - Parameters:
          - params: Parameters container, see `GetMeParams` struct
      - Throws: Throws on errors

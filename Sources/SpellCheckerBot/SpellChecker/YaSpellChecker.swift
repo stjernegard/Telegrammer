@@ -9,9 +9,9 @@ import Foundation
 import Telegrammer
 
 final class YaSpellChecker: SpellChecker {
-    
+
     typealias T = YaSpellCheck
-    
+
     var url = "https://speller.yandex.net/services/spellservice.json/checkText"
 
     let urlSession = URLSession(configuration: .default)

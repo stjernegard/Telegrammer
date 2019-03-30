@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [DeleteChatStickerSetParams](https://core.telegram.org/bots/api#deletechatstickerset)
-     
+
      - Parameters:
          - params: Parameters container, see `DeleteChatStickerSetParams` struct
      - Throws: Throws on errors

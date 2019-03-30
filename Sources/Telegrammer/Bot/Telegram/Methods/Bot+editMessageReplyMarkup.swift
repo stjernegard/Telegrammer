@@ -42,7 +42,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [EditMessageReplyMarkupParams](https://core.telegram.org/bots/api#editmessagereplymarkup)
-     
+
      - Parameters:
          - params: Parameters container, see `EditMessageReplyMarkupParams` struct
      - Throws: Throws on errors

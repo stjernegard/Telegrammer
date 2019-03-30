@@ -47,7 +47,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [EditMessageMediaParams](https://core.telegram.org/bots/api#editmessagemedia)
-     
+
      - Parameters:
          - params: Parameters container, see `EditMessageMediaParams` struct
      - Throws: Throws on errors

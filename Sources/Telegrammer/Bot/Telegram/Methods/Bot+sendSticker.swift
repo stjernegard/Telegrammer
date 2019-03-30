@@ -47,7 +47,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendStickerParams](https://core.telegram.org/bots/api#sendsticker)
-     
+
      - Parameters:
          - params: Parameters container, see `SendStickerParams` struct
      - Throws: Throws on errors

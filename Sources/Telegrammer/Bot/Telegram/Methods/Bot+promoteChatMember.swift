@@ -72,7 +72,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [PromoteChatMemberParams](https://core.telegram.org/bots/api#promotechatmember)
-     
+
      - Parameters:
          - params: Parameters container, see `PromoteChatMemberParams` struct
      - Throws: Throws on errors

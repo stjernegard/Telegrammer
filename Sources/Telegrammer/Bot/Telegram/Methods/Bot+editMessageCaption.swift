@@ -52,7 +52,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [EditMessageCaptionParams](https://core.telegram.org/bots/api#editmessagecaption)
-     
+
      - Parameters:
          - params: Parameters container, see `EditMessageCaptionParams` struct
      - Throws: Throws on errors

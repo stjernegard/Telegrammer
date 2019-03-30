@@ -78,7 +78,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendAudioParams](https://core.telegram.org/bots/api#sendaudio)
-     
+
      - Parameters:
          - params: Parameters container, see `SendAudioParams` struct
      - Throws: Throws on errors

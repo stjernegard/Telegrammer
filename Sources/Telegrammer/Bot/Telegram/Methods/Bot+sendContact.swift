@@ -62,7 +62,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendContactParams](https://core.telegram.org/bots/api#sendcontact)
-     
+
      - Parameters:
          - params: Parameters container, see `SendContactParams` struct
      - Throws: Throws on errors

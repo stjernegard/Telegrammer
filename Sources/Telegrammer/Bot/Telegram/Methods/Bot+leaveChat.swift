@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [LeaveChatParams](https://core.telegram.org/bots/api#leavechat)
-     
+
      - Parameters:
          - params: Parameters container, see `LeaveChatParams` struct
      - Throws: Throws on errors

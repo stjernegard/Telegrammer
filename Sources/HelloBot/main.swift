@@ -23,15 +23,15 @@ let bot = try! Bot(settings: settings)
 func greetNewMember(_ update: Update) throws {
     guard let message = update.message,
         let newUsers = message.newChatMembers else { return }
-    
+
     for user in newUsers {
         guard !user.isBot else { continue }
-        
+
         var name = user.firstName
         if let username = user.username {
             name = "@\(username)"
         }
-        
+
         let params = Bot.SendMessageParams(chatId: .chat(message.chat.id), text: """
             🎊🎉👋😃
             Hey \(name)!
@@ -46,7 +46,7 @@ func greetNewMember(_ update: Update) throws {
 func greeting(_ update: Update, _ context: BotContext?) throws {
     guard let message = update.message,
         let user = message.from else { return }
-    
+
     let params = Bot.SendMessageParams(chatId: .chat(message.chat.id), text: """
         Hello, \(user.firstName)! Nice to meet you.
         """)
@@ -55,18 +55,18 @@ func greeting(_ update: Update, _ context: BotContext?) throws {
 
 do {
     let dispatcher = Dispatcher(bot: bot)
-    
+
     ///Creating and adding New chat member handler
-	let newMemberHandler = NewMemberHandler(callback: greetNewMember)
+    let newMemberHandler = NewMemberHandler(callback: greetNewMember)
     dispatcher.add(handler: newMemberHandler)
-    
+
     ///Creating and adding Command handler for '/greet'
-	let commandHandler = CommandHandler(commands: ["/greet"], callback: greeting)
+    let commandHandler = CommandHandler(commands: ["/greet"], callback: greeting)
     dispatcher.add(handler: commandHandler)
-    
+
     ///Longpolling updates
     _ = try Updater(bot: bot, dispatcher: dispatcher).startLongpolling().wait()
-    
+
 } catch {
     print(error.localizedDescription)
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public class BotError: Error {
-    
+
 }
 //exception telegram.error.BadRequest(message)
 //Bases: telegram.error.NetworkError

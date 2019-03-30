@@ -47,7 +47,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [AddStickerToSetParams](https://core.telegram.org/bots/api#addstickertoset)
-     
+
      - Parameters:
          - params: Parameters container, see `AddStickerToSetParams` struct
      - Throws: Throws on errors

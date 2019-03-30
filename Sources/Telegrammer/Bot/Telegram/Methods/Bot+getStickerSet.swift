@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetStickerSetParams](https://core.telegram.org/bots/api#getstickerset)
-     
+
      - Parameters:
          - params: Parameters container, see `GetStickerSetParams` struct
      - Throws: Throws on errors

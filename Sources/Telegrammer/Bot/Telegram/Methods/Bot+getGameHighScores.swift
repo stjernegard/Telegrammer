@@ -43,7 +43,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetGameHighScoresParams](https://core.telegram.org/bots/api#getgamehighscores)
-     
+
      - Parameters:
          - params: Parameters container, see `GetGameHighScoresParams` struct
      - Throws: Throws on errors

@@ -37,7 +37,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetUserProfilePhotosParams](https://core.telegram.org/bots/api#getuserprofilephotos)
-     
+
      - Parameters:
          - params: Parameters container, see `GetUserProfilePhotosParams` struct
      - Throws: Throws on errors

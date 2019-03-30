@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetFileParams](https://core.telegram.org/bots/api#getfile)
-     
+
      - Parameters:
          - params: Parameters container, see `GetFileParams` struct
      - Throws: Throws on errors

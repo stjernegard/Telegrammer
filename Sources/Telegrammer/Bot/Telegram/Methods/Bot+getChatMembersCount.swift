@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetChatMembersCountParams](https://core.telegram.org/bots/api#getchatmemberscount)
-     
+
      - Parameters:
          - params: Parameters container, see `GetChatMembersCountParams` struct
      - Throws: Throws on errors

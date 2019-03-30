@@ -28,7 +28,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [DeleteChatPhotoParams](https://core.telegram.org/bots/api#deletechatphoto)
-     
+
      - Parameters:
          - params: Parameters container, see `DeleteChatPhotoParams` struct
      - Throws: Throws on errors

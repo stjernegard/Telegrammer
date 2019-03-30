@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [UnpinChatMessageParams](https://core.telegram.org/bots/api#unpinchatmessage)
-     
+
      - Parameters:
          - params: Parameters container, see `UnpinChatMessageParams` struct
      - Throws: Throws on errors

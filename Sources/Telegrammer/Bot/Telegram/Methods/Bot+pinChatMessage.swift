@@ -37,7 +37,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [PinChatMessageParams](https://core.telegram.org/bots/api#pinchatmessage)
-     
+
      - Parameters:
          - params: Parameters container, see `PinChatMessageParams` struct
      - Throws: Throws on errors

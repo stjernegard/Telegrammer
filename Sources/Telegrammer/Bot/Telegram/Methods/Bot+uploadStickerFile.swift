@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [UploadStickerFileParams](https://core.telegram.org/bots/api#uploadstickerfile)
-     
+
      - Parameters:
          - params: Parameters container, see `UploadStickerFileParams` struct
      - Throws: Throws on errors

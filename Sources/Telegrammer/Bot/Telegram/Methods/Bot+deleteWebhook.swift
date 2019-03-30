@@ -11,7 +11,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [DeleteWebhookParams](https://core.telegram.org/bots/api#deletewebhook)
-     
+
      - Parameters:
          - params: Parameters container, see `DeleteWebhookParams` struct
      - Throws: Throws on errors

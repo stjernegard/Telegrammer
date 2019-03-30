@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendPhotoParams](https://core.telegram.org/bots/api#sendphoto)
-     
+
      - Parameters:
          - params: Parameters container, see `SendPhotoParams` struct
      - Throws: Throws on errors

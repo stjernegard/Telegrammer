@@ -35,7 +35,7 @@ protocol SpellChecker {
 
 protocol SpellFlow {
     associatedtype C
-    
+
     func start(_ text: String, checks: [C])
     func next() -> (textChunk: String, spellFixes: [String])?
     func fix(_ text: String)

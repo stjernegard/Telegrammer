@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendLocationParams](https://core.telegram.org/bots/api#sendlocation)
-     
+
      - Parameters:
          - params: Parameters container, see `SendLocationParams` struct
      - Throws: Throws on errors

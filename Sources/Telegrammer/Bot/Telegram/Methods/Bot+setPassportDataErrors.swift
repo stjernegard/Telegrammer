@@ -33,7 +33,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetPassportDataErrorsParams](https://core.telegram.org/bots/api#setpassportdataerrors)
-     
+
      - Parameters:
          - params: Parameters container, see `SetPassportDataErrorsParams` struct
      - Throws: Throws on errors

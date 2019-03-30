@@ -77,7 +77,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendAnimationParams](https://core.telegram.org/bots/api#sendanimation)
-     
+
      - Parameters:
          - params: Parameters container, see `SendAnimationParams` struct
      - Throws: Throws on errors

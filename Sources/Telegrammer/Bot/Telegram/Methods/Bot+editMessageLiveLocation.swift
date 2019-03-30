@@ -52,7 +52,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [EditMessageLiveLocationParams](https://core.telegram.org/bots/api#editmessagelivelocation)
-     
+
      - Parameters:
          - params: Parameters container, see `EditMessageLiveLocationParams` struct
      - Throws: Throws on errors

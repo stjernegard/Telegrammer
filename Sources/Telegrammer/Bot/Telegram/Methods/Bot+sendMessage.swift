@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendMessageParams](https://core.telegram.org/bots/api#sendmessage)
-     
+
      - Parameters:
          - params: Parameters container, see `SendMessageParams` struct
      - Throws: Throws on errors

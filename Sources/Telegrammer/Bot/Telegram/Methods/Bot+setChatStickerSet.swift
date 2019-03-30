@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetChatStickerSetParams](https://core.telegram.org/bots/api#setchatstickerset)
-     
+
      - Parameters:
          - params: Parameters container, see `SetChatStickerSetParams` struct
      - Throws: Throws on errors

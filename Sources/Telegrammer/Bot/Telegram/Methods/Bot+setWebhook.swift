@@ -19,7 +19,7 @@ public extension Bot {
         var maxConnections: Int?
 
         /// List the types of updates you want your bot to receive. For example, specify [“message”, “edited_channel_post”, “callback_query”] to only receive updates of these types. See Update for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default). If not specified, the previous setting will be used.
-        /// 
+        ///
         /// Please note that this parameter doesn't affect updates created before the call to the setWebhook, so unwanted updates may be received for a short period of time.
         var allowedUpdates: [String]?
 
@@ -45,7 +45,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetWebhookParams](https://core.telegram.org/bots/api#setwebhook)
-     
+
      - Parameters:
          - params: Parameters container, see `SetWebhookParams` struct
      - Throws: Throws on errors

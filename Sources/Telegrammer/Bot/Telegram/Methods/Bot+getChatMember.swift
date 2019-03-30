@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetChatMemberParams](https://core.telegram.org/bots/api#getchatmember)
-     
+
      - Parameters:
          - params: Parameters container, see `GetChatMemberParams` struct
      - Throws: Throws on errors

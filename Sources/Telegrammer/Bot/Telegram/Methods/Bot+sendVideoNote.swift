@@ -62,7 +62,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendVideoNoteParams](https://core.telegram.org/bots/api#sendvideonote)
-     
+
      - Parameters:
          - params: Parameters container, see `SendVideoNoteParams` struct
      - Throws: Throws on errors

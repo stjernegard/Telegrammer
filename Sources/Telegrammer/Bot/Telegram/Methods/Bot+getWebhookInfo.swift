@@ -11,7 +11,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [GetWebhookInfoParams](https://core.telegram.org/bots/api#getwebhookinfo)
-     
+
      - Parameters:
          - params: Parameters container, see `GetWebhookInfoParams` struct
      - Throws: Throws on errors

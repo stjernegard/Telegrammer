@@ -37,7 +37,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [AnswerPreCheckoutQueryParams](https://core.telegram.org/bots/api#answerprecheckoutquery)
-     
+
      - Parameters:
          - params: Parameters container, see `AnswerPreCheckoutQueryParams` struct
      - Throws: Throws on errors

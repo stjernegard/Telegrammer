@@ -33,7 +33,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetChatTitleParams](https://core.telegram.org/bots/api#setchattitle)
-     
+
      - Parameters:
          - params: Parameters container, see `SetChatTitleParams` struct
      - Throws: Throws on errors

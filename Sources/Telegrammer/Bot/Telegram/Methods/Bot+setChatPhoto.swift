@@ -33,7 +33,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetChatPhotoParams](https://core.telegram.org/bots/api#setchatphoto)
-     
+
      - Parameters:
          - params: Parameters container, see `SetChatPhotoParams` struct
      - Throws: Throws on errors

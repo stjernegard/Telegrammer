@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SetStickerPositionInSetParams](https://core.telegram.org/bots/api#setstickerpositioninset)
-     
+
      - Parameters:
          - params: Parameters container, see `SetStickerPositionInSetParams` struct
      - Throws: Throws on errors

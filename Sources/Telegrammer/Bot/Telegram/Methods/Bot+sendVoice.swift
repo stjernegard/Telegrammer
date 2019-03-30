@@ -62,7 +62,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendVoiceParams](https://core.telegram.org/bots/api#sendvoice)
-     
+
      - Parameters:
          - params: Parameters container, see `SendVoiceParams` struct
      - Throws: Throws on errors

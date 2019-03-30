@@ -72,7 +72,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [SendVenueParams](https://core.telegram.org/bots/api#sendvenue)
-     
+
      - Parameters:
          - params: Parameters container, see `SendVenueParams` struct
      - Throws: Throws on errors

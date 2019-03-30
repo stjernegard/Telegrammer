@@ -32,7 +32,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [UnbanChatMemberParams](https://core.telegram.org/bots/api#unbanchatmember)
-     
+
      - Parameters:
          - params: Parameters container, see `UnbanChatMemberParams` struct
      - Throws: Throws on errors

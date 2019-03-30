@@ -57,7 +57,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [CreateNewStickerSetParams](https://core.telegram.org/bots/api#createnewstickerset)
-     
+
      - Parameters:
          - params: Parameters container, see `CreateNewStickerSetParams` struct
      - Throws: Throws on errors

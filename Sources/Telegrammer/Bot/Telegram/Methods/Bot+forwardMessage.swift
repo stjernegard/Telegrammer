@@ -42,7 +42,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [ForwardMessageParams](https://core.telegram.org/bots/api#forwardmessage)
-     
+
      - Parameters:
          - params: Parameters container, see `ForwardMessageParams` struct
      - Throws: Throws on errors

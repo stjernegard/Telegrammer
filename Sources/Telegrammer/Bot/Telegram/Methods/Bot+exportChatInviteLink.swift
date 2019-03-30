@@ -27,7 +27,7 @@ public extension Bot {
 
      SeeAlso Telegram Bot API Reference:
      [ExportChatInviteLinkParams](https://core.telegram.org/bots/api#exportchatinvitelink)
-     
+
      - Parameters:
          - params: Parameters container, see `ExportChatInviteLinkParams` struct
      - Throws: Throws on errors

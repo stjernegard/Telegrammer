@@ -60,7 +60,7 @@ public class DailyJob<C>: Job {
 
     public func run(_ bot: BotProtocol) throws {
         guard let today = Day.todayWeekDay, days.contains(today) else { return }
-        
+
         if scheduledRemoval {
             scheduler?.cancel()
         } else {
